@@ -1,1 +1,171 @@
-print('hi')
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local RaceAroundTheWorld = Instance.new("ScreenGui")
+local Holder = Instance.new("Frame")
+local WelcomeFrame = Instance.new("Frame")
+local WelcomeMessage = Instance.new("TextLabel")
+local UIAspectRatioConstraint = Instance.new("UIAspectRatioConstraint")
+local Avatar = Instance.new("ImageLabel")
+local UICorner = Instance.new("UICorner")
+local UIAspectRatioConstraint_2 = Instance.new("UIAspectRatioConstraint")
+local UICorner_2 = Instance.new("UICorner")
+local Components = Instance.new("Folder")
+local Header = Instance.new("Frame")
+local Exit = Instance.new("TextButton")
+local Title = Instance.new("TextLabel")
+local UIAspectRatioConstraint_3 = Instance.new("UIAspectRatioConstraint")
+
+--Properties:
+
+RaceAroundTheWorld.Name = "RaceAroundTheWorld"
+RaceAroundTheWorld.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+RaceAroundTheWorld.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+RaceAroundTheWorld.ResetOnSpawn = false
+
+Holder.Name = "Holder"
+Holder.Parent = RaceAroundTheWorld
+Holder.AnchorPoint = Vector2.new(0.5, 0.5)
+Holder.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+Holder.BorderSizePixel = 0
+Holder.ClipsDescendants = true
+Holder.Position = UDim2.new(0.5, 0, 0.5, 0)
+Holder.Size = UDim2.new(0.311216444, 0, 0.32487309, 0)
+Holder.Visible = false
+
+WelcomeFrame.Name = "WelcomeFrame"
+WelcomeFrame.Parent = Holder
+WelcomeFrame.AnchorPoint = Vector2.new(0.5, 0.5)
+WelcomeFrame.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+WelcomeFrame.BackgroundTransparency = 1.000
+WelcomeFrame.BorderSizePixel = 0
+WelcomeFrame.Position = UDim2.new(0.5, 0, 0.5, 0)
+WelcomeFrame.Size = UDim2.new(1, 0, 1, 0)
+
+WelcomeMessage.Name = "WelcomeMessage"
+WelcomeMessage.Parent = WelcomeFrame
+WelcomeMessage.AnchorPoint = Vector2.new(0.5, 0.5)
+WelcomeMessage.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+WelcomeMessage.BackgroundTransparency = 1.000
+WelcomeMessage.BorderSizePixel = 0
+WelcomeMessage.Position = UDim2.new(0.5, 0, 0.916666567, 0)
+WelcomeMessage.Size = UDim2.new(0.5, 0, 0.100000001, 0)
+WelcomeMessage.Font = Enum.Font.Gotham
+WelcomeMessage.RichText = true
+WelcomeMessage.Text = "Welcome, <b>anthlons.</b>"
+WelcomeMessage.TextColor3 = Color3.fromRGB(255, 255, 255)
+WelcomeMessage.TextScaled = true
+WelcomeMessage.TextSize = 14.000
+WelcomeMessage.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
+WelcomeMessage.TextTransparency = 1.000
+WelcomeMessage.TextWrapped = true
+
+UIAspectRatioConstraint.Parent = WelcomeMessage
+UIAspectRatioConstraint.AspectRatio = 9.187
+
+Avatar.Name = "Avatar"
+Avatar.Parent = WelcomeFrame
+Avatar.AnchorPoint = Vector2.new(0.5, 0.5)
+Avatar.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+Avatar.BorderSizePixel = 0
+Avatar.Position = UDim2.new(0.498446673, 0, 0.496979088, 0)
+Avatar.Size = UDim2.new(0.322781563, 0, 0.609124959, 0)
+Avatar.Image = "rbxthumb://type=AvatarHeadShot&id=154278060&w=420&h=420"
+
+UICorner.CornerRadius = UDim.new(1, 0)
+UICorner.Parent = Avatar
+
+UIAspectRatioConstraint_2.Parent = Avatar
+
+UICorner_2.CornerRadius = UDim.new(0, 9)
+UICorner_2.Parent = Holder
+
+Components.Name = "Components"
+Components.Parent = Holder
+
+Header.Name = "Header"
+Header.Parent = Components
+Header.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Header.BackgroundTransparency = 1.000
+Header.BorderSizePixel = 0
+Header.Size = UDim2.new(0.99999994, 0, 0.145833328, 0)
+
+Exit.Name = "Exit"
+Exit.Parent = Header
+Exit.Active = false
+Exit.BackgroundColor3 = Color3.fromRGB(248, 248, 248)
+Exit.BackgroundTransparency = 1.000
+Exit.BorderSizePixel = 0
+Exit.Position = UDim2.new(0.895939171, 0, 0.220238343, 0)
+Exit.Selectable = false
+Exit.Size = UDim2.new(0.0837563351, 0, 0.531995356, 0)
+Exit.Font = Enum.Font.GothamSemibold
+Exit.Text = "EXIT"
+Exit.TextColor3 = Color3.fromRGB(255, 255, 255)
+Exit.TextScaled = true
+Exit.TextSize = 14.000
+Exit.TextTransparency = 1.000
+Exit.TextWrapped = true
+
+Title.Name = "Title"
+Title.Parent = Header
+Title.AnchorPoint = Vector2.new(0.5, 0.5)
+Title.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Title.BackgroundTransparency = 1.000
+Title.Position = UDim2.new(0.5, 0, 0.5, 0)
+Title.Size = UDim2.new(0.959999979, 0, 0.600000024, 0)
+Title.Font = Enum.Font.GothamSemibold
+Title.Text = "RACE AROUND THE WORLD"
+Title.TextColor3 = Color3.fromRGB(255, 255, 255)
+Title.TextScaled = true
+Title.TextSize = 14.000
+Title.TextTransparency = 1.000
+Title.TextWrapped = true
+Title.TextXAlignment = Enum.TextXAlignment.Left
+
+UIAspectRatioConstraint_3.Parent = Holder
+UIAspectRatioConstraint_3.AspectRatio = 2.052
+
+-- Scripts:
+
+local function QYYEKNC_fake_script() -- RaceAroundTheWorld.Client 
+	local script = Instance.new('LocalScript', RaceAroundTheWorld)
+
+	local modules = {
+		tweenModule = {
+			tween = function(tweenTime, instance, style, direction, contents, rev)
+				local ts = game:GetService("TweenService")
+				local TI = TweenInfo.new(tweenTime or 1, Enum.EasingStyle[style] or Enum.EasingStyle.Linear, Enum.EasingDirection[direction] or Enum.EasingDirection.InOut, 0, rev, 0)
+				ts:Create(instance, TI, contents):Play()
+			end
+		},
+	}
+	--variables
+	local welcomeFrame = script.Parent.Holder.WelcomeFrame
+	
+	local thumbType = Enum.ThumbnailType.HeadShot
+	local thumbSize = Enum.ThumbnailSize.Size420x420
+	local content, isReady = game.Players:GetUserThumbnailAsync(game.Players.LocalPlayer.UserId, thumbType, thumbSize)
+	welcomeFrame.Avatar.Image = content
+	local components = script.Parent.Holder.Components
+	--startup
+	task.wait(1)
+	script.Parent.Holder.Visible = true
+	task.wait(3)
+	modules.tweenModule.tween(1, welcomeFrame.Avatar, 'Quint', 'Out', {Size = UDim2.new(0.292, 0, 0.406, 0), Position = UDim2.new(0.5, 0, 0.421, 0)}, false)
+	task.wait(1)
+	modules.tweenModule.tween(.5, welcomeFrame.WelcomeMessage, 'Quint', 'Out', {TextTransparency = 0, Position = UDim2.new(0.5, 0, 0.708, 0)}, false)
+	task.wait(3)
+	modules.tweenModule.tween(1, welcomeFrame, 'Quint', 'Out', {Position = UDim2.new(0.5, 0, 2, 0)}, false)
+	task.wait(1)
+	modules.tweenModule.tween(.5, components.Header.Exit, 'Quint', 'Out', {TextTransparency = 0}, false)
+	modules.tweenModule.tween(.5, components.Header.Title, 'Quint', 'Out', {TextTransparency = 0}, false)
+	
+	components.Header.Exit.MouseButton1Click:Connect(function()
+		script.Parent.Holder.Visible = false
+		script.Parent:Destroy()
+	end)
+end
+coroutine.wrap(QYYEKNC_fake_script)()
